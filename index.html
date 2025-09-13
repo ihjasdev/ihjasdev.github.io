@@ -1,1 +1,419 @@
-<h1>Hello I'm Ihjas</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ihjas Abdullah — Software Engineer</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome (Icons CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfN3E3Z1Z8C7C0GvJ3W8V4YpGQv3Q9yK9Ew8mGZ0qgVqfHnYkZ5+5o9g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root { color-scheme: dark; }
+    html, body { height: 100%; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    /* --- Soft animated gradient background --- */
+    .bg-animated {
+      position: fixed; inset: 0; z-index: -1;
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(59,130,246,0.25), transparent 60%),
+                  radial-gradient(900px 700px at 90% 20%, rgba(236,72,153,0.22), transparent 60%),
+                  radial-gradient(1000px 900px at 50% 100%, rgba(34,197,94,0.18), transparent 60%),
+                  linear-gradient(180deg, #0b0f1a 0%, #0a0f18 100%);
+      filter: saturate(110%) contrast(105%);
+      overflow: hidden;
+    }
+    .blob {
+      position: absolute; border-radius: 50%;
+      mix-blend-mode: screen; opacity: 0.45; filter: blur(40px);
+      animation: float 16s ease-in-out infinite;
+    }
+    .blob:nth-child(1){ width: 40vmax; height: 40vmax; left: -10vmax; top: -10vmax; background: #1d4ed8; animation-delay: 0s;}
+    .blob:nth-child(2){ width: 35vmax; height: 35vmax; right: -8vmax; top: 5vmax; background: #db2777; animation-delay: 4s;}
+    .blob:nth-child(3){ width: 45vmax; height: 45vmax; left: 10vmax; bottom: -12vmax; background: #10b981; animation-delay: 8s;}
+    @keyframes float {
+      0%, 100% { transform: translate3d(0,0,0) rotate(0deg) scale(1); }
+      50%      { transform: translate3d(2vmax,-3vmax,0) rotate(15deg) scale(1.08); }
+    }
+    /* Fancy card hover */
+    .hover-card { transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+    .hover-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    /* Subtle divider */
+    .hairline { border-top: 1px solid rgba(255,255,255,0.08); }
+    /* Pill */
+    .pill { border:1px solid rgba(255,255,255,.12); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); }
+    /* Section container */
+    .section { max-width: 1100px; margin: 0 auto; }
+  </style>
+</head>
+
+<body class="bg-[#0b0f1a] text-white/90 selection:bg-white/10 selection:text-white">
+  <!-- Animated Background -->
+  <div class="bg-animated">
+    <span class="blob"></span>
+    <span class="blob"></span>
+    <span class="blob"></span>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/20 border-b border-white/10">
+    <div class="section px-5 py-3 flex items-center justify-between">
+      <a href="#" class="font-extrabold tracking-tight text-lg md:text-xl">
+        <i class="fa-solid fa-code"></i> <span class="ml-2">Ihjas<span class="text-blue-400">.dev</span></span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-5 text-sm">
+        <a href="#about" class="hover:text-white/100 text-white/70">About</a>
+        <a href="#skills" class="hover:text-white/100 text-white/70">Skills</a>
+        <a href="#experience" class="hover:text-white/100 text-white/70">Experience</a>
+        <a href="#projects" class="hover:text-white/100 text-white/70">Projects</a>
+        <a href="#education" class="hover:text-white/100 text-white/70">Education</a>
+        <a href="#certs" class="hover:text-white/100 text-white/70">Certifications</a>
+        <a href="#contact" class="hover:text-white/100 text-white/70">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-xl pill hover:brightness-110"
+           id="cvButton" href="#" target="_blank" rel="noopener">
+          <i class="fa-solid fa-file-pdf"></i> <span>View CV</span>
+        </a>
+        <a class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-xl pill hover:brightness-110"
+           href="mailto:ihjasdev@gmail.com">
+          <i class="fa-solid fa-paper-plane"></i> <span>Hire Me</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="section px-5 pt-16 md:pt-24 pb-10 md:pb-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div data-aos="fade-up" data-aos-delay="50">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/60 mb-4">
+          <i class="fa-solid fa-bolt"></i> Available for opportunities
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1]">
+          Ihjas <span class="text-blue-400">Abdullah</span>
+        </h1>
+        <p class="mt-4 text-lg text-white/80 max-w-xl">
+          Software Engineer with 3+ years building modern web applications and enhancing ERP-POS systems.
+          Strong in React, Redux, MongoDB, PHP, and front-end fundamentals. Passionate about using tech for
+          transparency and social impact.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="https://www.linkedin.com/in/ihjasabdullah/" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/ihjasdev" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="#contact"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+            <i class="fa-solid fa-envelope-open-text"></i> Contact
+          </a>
+        </div>
+        <div class="mt-6 text-sm text-white/70">
+          <i class="fa-solid fa-location-dot mr-2"></i>Colombo, Sri Lanka ·
+          <a class="underline-offset-4 hover:underline" href="mailto:ihjasdev@gmail.com">ihjasdev@gmail.com</a>
+        </div>
+      </div>
+      <div class="relative" data-aos="zoom-in" data-aos-delay="100">
+        <div class="hover-card rounded-3xl border border-white/10 p-6 bg-white/[0.03]">
+          <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-3 text-sm text-white/70">Quick Stats</div>
+            <div class="rounded-2xl p-4 bg-white/[0.04] border border-white/10">
+              <div class="text-2xl font-bold">3+ yrs</div>
+              <div class="text-xs text-white/60">Experience</div>
+            </div>
+            <div class="rounded-2xl p-4 bg-white/[0.04] border border-white/10">
+              <div class="text-2xl font-bold">React</div>
+              <div class="text-xs text-white/60">Frontend</div>
+            </div>
+            <div class="rounded-2xl p-4 bg-white/[0.04] border border-white/10">
+              <div class="text-2xl font-bold">Full-stack</div>
+              <div class="text-xs text-white/60">Mongo / PHP</div>
+            </div>
+            <div class="col-span-3 hairline"></div>
+            <ul class="col-span-3 grid grid-cols-2 gap-3 text-sm">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>Transparency-focused solutions</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>Agile & Jira</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>Data-driven UX</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>CI/CD savvy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section px-5 py-12">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+        <p class="mt-4 text-white/80">
+          I develop clean, performant web apps with a focus on usability and maintainability. I’ve contributed
+          to coaching/monitoring platforms, ERP-POS improvements, and NGO tech ops—bringing together
+          front-end engineering, collaboration, and a product mindset.
+        </p>
+      </div>
+      <div class="space-y-2">
+        <div class="text-sm text-white/70"><i class="fa-solid fa-briefcase mr-2"></i>Software Engineer</div>
+        <div class="text-sm text-white/70"><i class="fa-solid fa-language mr-2"></i>English, Tamil, Sinhala</div>
+        <div class="text-sm text-white/70"><i class="fa-solid fa-laptop-code mr-2"></i>Open to remote / hybrid</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section px-5 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Skills</h2>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Tech stacks -->
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="fade-up">
+        <div class="font-semibold mb-3"><i class="fa-solid fa-code mr-2"></i>Frontend</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">HTML5</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">CSS</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">JavaScript</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">React</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Next.js</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Redux / Saga</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Bootstrap</span>
+        </div>
+      </div>
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="fade-up" data-aos-delay="50">
+        <div class="font-semibold mb-3"><i class="fa-solid fa-database mr-2"></i>Backend & DB</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">PHP</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">MongoDB</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">MySQL</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">MSSQL</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">REST APIs</span>
+        </div>
+      </div>
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-semibold mb-3"><i class="fa-solid fa-toolbox mr-2"></i>Tools & Cloud</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Git / GitHub / GitLab / Bitbucket</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Jira</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">AWS</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Azure</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">GCP / Firebase</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Figma</span>
+        </div>
+      </div>
+      <!-- Soft Skills -->
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="fade-up">
+        <div class="font-semibold mb-3"><i class="fa-solid fa-people-group mr-2"></i>Key Competencies</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Problem Solving</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Collaboration</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Leadership</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Time Management</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-sm">Creativity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section px-5 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Experience</h2>
+    <div class="mt-6 grid gap-4">
+      <!-- PAFFREL -->
+      <article class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="fade-up">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="text-xl font-semibold">ICT Coordinator · PAFFREL</h3>
+          <span class="text-sm text-white/70"><i class="fa-regular fa-calendar mr-1"></i>Sep 2024 – Dec 2024 · Colombo</span>
+        </div>
+        <ul class="mt-3 space-y-2 text-white/85">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-1"></i><span>Managed the PAFFREL website and content updates.</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-1"></i><span>Maintained Kobo Collect app database for election data accuracy.</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-1"></i><span>Provided IT support, network maintenance, and asset management.</span></li>
+        </ul>
+      </article>
+      <!-- Acentura -->
+      <article class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="text-xl font-semibold">Associate Software Engineer · Acentura Inc</h3>
+          <span class="text-sm text-white/70"><i class="fa-regular fa-calendar mr-1"></i>Jun 2023 – Feb 2024 · Colombo</span>
+        </div>
+        <p class="mt-2 text-white/85">
+          Frontend developer on a Coaching & Monitoring web application using React, Redux, Redux-Saga, MongoDB. Tools: Jira, Bitbucket.
+        </p>
+      </article>
+      <!-- Mertics -->
+      <article class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="text-xl font-semibold">Intern Software Engineer · Mertics (Pvt) Ltd</h3>
+          <span class="text-sm text-white/70"><i class="fa-regular fa-calendar mr-1"></i>Jul 2022 – Jan 2023 · Colombo</span>
+        </div>
+        <p class="mt-2 text-white/85">
+          Improved ERP-POS systems by gathering requirements and delivering features using PHP, JavaScript, CSS, HTML.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section px-5 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Projects</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-5">
+      <article class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10" data-aos="zoom-in">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-semibold">MindME23</h3>
+          <span class="text-xs text-white/60"><i class="fa-regular fa-calendar mr-1"></i>May 2022 – Jun 2023</span>
+        </div>
+        <p class="mt-2 text-white/85">
+          Personality-aware e-commerce recommender using Twitter data.
+          Stack: C#, ML.NET, Visual Studio. (Final-year university project)
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="pill px-3 py-1.5 rounded-xl text-xs">C#</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-xs">ML.NET</span>
+          <span class="pill px-3 py-1.5 rounded-xl text-xs">Recommenders</span>
+        </div>
+      </article>
+      <!-- Placeholder project card to add more later -->
+      <article class="rounded-2xl p-5 border border-dashed border-white/15 bg-white/[0.02]">
+        <div class="text-white/70">Add more projects here (GitHub repos, demos, case studies)…</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section px-5 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Education</h2>
+    <div class="mt-6 grid lg:grid-cols-2 gap-5">
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="font-semibold">BICT (Hons) — Software Technology</div>
+            <div class="text-white/70 text-sm">University of Sri Jayewardenepura</div>
+          </div>
+          <div class="text-xs text-white/60"><i class="fa-regular fa-calendar mr-1"></i>Feb 2019 – Oct 2023</div>
+        </div>
+      </div>
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="font-semibold">G.C.E. Advanced Level</div>
+            <div class="text-white/70 text-sm">T/Kinniya Al-Aqsa National School</div>
+            <div class="text-white/60 text-xs mt-1">District Rank 01 (Merit), Island Rank 46 (Z-score 2.59)</div>
+          </div>
+          <div class="text-xs text-white/60"><i class="fa-regular fa-calendar mr-1"></i>Jan 2015 – Aug 2017</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="section px-5 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Certifications</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-5">
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="font-semibold">WSO2 Certified API Manager Practitioner v4</div>
+            <div class="text-white/70 text-sm">API Management Profile</div>
+          </div>
+          <div class="text-xs text-white/60"><i class="fa-regular fa-calendar mr-1"></i>Oct 2023 – Nov 2023</div>
+        </div>
+      </div>
+      <div class="hover-card rounded-2xl p-5 bg-white/[0.04] border border-white/10">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="font-semibold">Internet Governance & Digital Rights-Based Digital Literacy</div>
+            <div class="text-white/70 text-sm">Sarvodaya Fusion (4-week program)</div>
+          </div>
+          <div class="text-xs text-white/60"><i class="fa-regular fa-calendar mr-1"></i>Oct 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section px-5 py-14">
+    <div class="rounded-3xl p-6 md:p-8 bg-gradient-to-r from-white/[0.06] to-white/[0.03] border border-white/10 hover-card">
+      <div class="grid md:grid-cols-[1.2fr,0.8fr] gap-6 items-center">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Let’s build something great.</h2>
+          <p class="mt-2 text-white/80">
+            I’m open to software engineering roles and collaborations. Reach out for product builds,
+            frontend projects, or full-stack work.
+          </p>
+          <div class="mt-5 flex flex-wrap items-center gap-3">
+            <a href="mailto:ihjasdev@gmail.com"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+              <i class="fa-solid fa-envelope"></i> ihjasdev@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/ihjasabdullah/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/ihjasdev" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <form class="space-y-3">
+          <div class="grid sm:grid-cols-2 gap-3">
+            <input class="w-full px-3 py-2 rounded-xl bg-white/[0.06] border border-white/10 outline-none focus:ring-2 focus:ring-white/20" placeholder="Your name" />
+            <input class="w-full px-3 py-2 rounded-xl bg-white/[0.06] border border-white/10 outline-none focus:ring-2 focus:ring-white/20" placeholder="Email address" type="email" />
+          </div>
+          <textarea rows="4" class="w-full px-3 py-2 rounded-xl bg-white/[0.06] border border-white/10 outline-none focus:ring-2 focus:ring-white/20" placeholder="Message"></textarea>
+          <button type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+          <p class="text-xs text-white/60">This demo form doesn’t send yet — link your backend or form service.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-5 py-10 text-center text-white/60">
+    <div class="section">
+      <div class="flex items-center justify-center gap-4 mb-2">
+        <a href="https://www.linkedin.com/in/ihjasabdullah/" target="_blank" rel="noopener" class="hover:text-white"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/ihjasdev" target="_blank" rel="noopener" class="hover:text-white"><i class="fa-brands fa-github fa-lg"></i></a>
+        <a href="mailto:ihjasdev@gmail.com" class="hover:text-white"><i class="fa-solid fa-at fa-lg"></i></a>
+      </div>
+      <div class="text-xs">© <span id="year"></span> Ihjas Abdullah. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ——— Set your CV link here ———
+    // If you deploy the PDF next to this HTML, you can set: './Ihjas_Abdullah_CV.pdf'
+    // Or serve from your preferred URL:
+    const CV_URL = './Ihjas_Abdullah.pdf'; // TODO: replace with your actual path
+    const cvBtn = document.getElementById('cvButton');
+    if (cvBtn) cvBtn.href = CV_URL;
+  </script>
+</body>
+</html>

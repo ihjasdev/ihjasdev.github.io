@@ -99,67 +99,61 @@
   </header>
 
   <!-- Hero -->
-  <section class="section px-5 pt-16 md:pt-24 pb-10 md:pb-16">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <div data-aos="fade-up" data-aos-delay="50">
-        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/60 mb-4">
-          <i class="fa-solid fa-bolt"></i> Available for opportunities
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1]">
-          Ihjas <span class="text-blue-400">Abdullah</span>
-        </h1>
-        <p class="mt-4 text-lg text-white/80 max-w-xl">
-          Software Engineer with 3+ years building modern web applications and enhancing ERP-POS systems.
-          Strong in React, Redux, MongoDB, PHP, and front-end fundamentals. Passionate about using tech for
-          transparency and social impact.
-        </p>
-        <div class="mt-6 flex flex-wrap items-center gap-3">
-          <a href="https://www.linkedin.com/in/ihjasabdullah/" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://github.com/ihjasdev" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-          <a href="#contact"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
-            <i class="fa-solid fa-envelope-open-text"></i> Contact
-          </a>
-        </div>
-        <div class="mt-6 text-sm text-white/70">
-          <i class="fa-solid fa-location-dot mr-2"></i>Colombo, Sri Lanka ·
-          <a class="underline-offset-4 hover:underline" href="mailto:ihjasdev@gmail.com">ihjasdev@gmail.com</a>
-        </div>
+  <!-- ===== Hero Section (drop this where your <section> was) ===== -->
+<section id="hero" class="section px-5 pt-16 md:pt-24 pb-10 md:pb-16">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <!-- Left: Intro text -->
+    <div>
+      <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/60 mb-4">
+        <i class="fa-solid fa-bolt"></i> Available for opportunities
       </div>
-      <div class="relative" data-aos="zoom-in" data-aos-delay="100">
-        <div class="hover-card rounded-3xl border border-white/10 p-6 bg-white/[0.03]">
-          <div class="grid grid-cols-3 gap-4">
-            <div class="col-span-3 text-sm text-white/70">Quick Stats</div>
-            <div class="rounded-2xl p-4 bg-white/[0.04] border border-white/10">
-              <div class="text-2xl font-bold">3+ yrs</div>
-              <div class="text-xs text-white/60">Experience</div>
-            </div>
-            <div class="rounded-2xl p-4 bg-white/[0.04] border border-white/10">
-              <div class="text-2xl font-bold">React</div>
-              <div class="text-xs text-white/60">Frontend</div>
-            </div>
-            <div class="rounded-2xl p-4 bg-white/[0.04] border border-white/10">
-              <div class="text-2xl font-bold">Full-stack</div>
-              <div class="text-xs text-white/60">Mongo / PHP</div>
-            </div>
-            <div class="col-span-3 hairline"></div>
-            <ul class="col-span-3 grid grid-cols-2 gap-3 text-sm">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>Transparency-focused solutions</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>Agile & Jira</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>Data-driven UX</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i>CI/CD savvy</li>
-            </ul>
-          </div>
-        </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1]">
+        Ihjas <span class="text-blue-400">Abdullah</span>
+      </h1>
+      <p class="mt-4 text-lg text-white/80 max-w-xl">
+        Software Engineer with 3+ years building modern web applications and enhancing ERP-POS systems.
+        Strong in React, Redux, MongoDB, PHP, and front-end fundamentals. Passionate about using tech for
+        transparency and social impact.
+      </p>
+
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href="https://www.linkedin.com/in/ihjasabdullah/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/ihjasdev" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl pill hover:brightness-110">
+          <i class="fa-solid fa-envelope-open-text"></i> Contact
+        </a>
+      </div>
+
+      <div class="mt-6 text-sm text-white/70">
+        <i class="fa-solid fa-location-dot mr-2"></i>Colombo, Sri Lanka ·
+        <a class="underline-offset-4 hover:underline" href="mailto:ihjasdev@gmail.com">ihjasdev@gmail.com</a>
       </div>
     </div>
-  </section>
+
+    <!-- Right: Circular photo -->
+    <div class="relative flex items-center justify-center md:justify-end">
+      <div class="relative">
+        <!-- soft glow behind the avatar -->
+        <span class="absolute -inset-3 rounded-full bg-gradient-to-tr from-blue-600/30 via-fuchsia-500/30 to-emerald-400/30 blur-2xl"></span>
+
+        <!-- avatar (circle) -->
+        <img
+          src="./assets/ihjas-portrait.png"
+          alt="Portrait of Ihjas Abdullah"
+          class="relative w-44 h-44 md:w-64 md:h-64 rounded-full object-cover ring-2 ring-white/20 shadow-2xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- About -->
   <section id="about" class="section px-5 py-12">
